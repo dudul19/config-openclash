@@ -1,102 +1,286 @@
-proxies:
-  - name: "🚀 Direct"
-    type: direct
-    udp: true
-  - name: "⛔ Reject"
-    type: reject
+# ==========================================================
+#  Config OpenClash Full Rule - Mr Dudul
+#  Core: Clash Meta (mihomo)
+# ==========================================================
+
+mode: rule
+log-level: warning
+ipv6: false
+allow-lan: true
+
+# --- Bikin ping (delay test) lebih imut & koneksi lebih cepat ---
+unified-delay: true        # ping dihitung tanpa handshake TLS/WS -> angka lebih kecil & stabil
+tcp-concurrent: true       # konek ke semua IP hasil DNS sekaligus, ambil yang paling cepat
+find-process-mode: "off"    # router tidak perlu cek proses, hemat CPU
+keep-alive-interval: 15
+keep-alive-idle: 30
+
+profile:
+  store-selected: true     # pilihan akun di dashboard tidak hilang setelah restart
+  store-fake-ip: true
+
+sniffer:
+  enable: true
+  force-dns-mapping: true
+  parse-pure-ip: true
+  override-destination: false
+  sniff:
+    HTTP:
+      ports: [80, 8080-8880]
+    TLS:
+      ports: [443, 8443]
+    QUIC:
+      ports: [443, 8443]
+  skip-domain:
+    - "Mijia Cloud"
+    - "+.push.apple.com"
+
+dns:
+  enable: true
+  ipv6: false
+  listen: 0.0.0.0:7874
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+    - "*.lan"
+    - "*.local"
+    - "*.localdomain"
+    - "+.msftconnecttest.com"
+    - "+.msftncsi.com"
+    - "+.pool.ntp.org"
+    - "time.*.com"
+    - "time.*.gov"
+    - "ntp.*.com"
+    - "+.stun.*.*"
+    - "+.stun.*.*.*"
+    - "stun.*.*"
+    - "stun.*.*.*"
+    - "+.srv.nintendo.net"
+    - "+.stun.playstation.net"
+    - "xbox.*.microsoft.com"
+    - "+.xboxlive.com"
+    - "localhost.ptlogin2.qq.com"
+  default-nameserver:
+    - 8.8.8.8
+    - 1.1.1.1
+  nameserver:
+    - 8.8.8.8
+    - 1.1.1.1
+    - 8.8.4.4
+  proxy-server-nameserver:
+    - 8.8.8.8
+    - 1.1.1.1
 
 proxy-providers:
   PROXIES:
     type: file
     path: "./proxy_provider/proxy.yaml"
     health-check:
-      enable: false
-      url: http://cp.cloudflare.com/generate_204
+      enable: true
+      url: http://www.google.co.id/generate_204
       interval: 300
+      timeout: 3000
+      lazy: true
+      expected-status: 204
 
 proxy-groups:
-  - name: 🛡️ Ads Block
-    type: select
-    disable-udp: false
+  # Otomatis pilih akun dengan ping paling kecil
+  - name: ⚡ Best Ping
+    type: url-test
     use:
       - PROXIES
-    proxies:
-      - "⛔ Reject"   
-      - "🚀 Direct"   
-
-  - name: 🎬 Streaming
-    type: select
-    disable-udp: false
-    use:
-      - PROXIES
-    proxies:
-      - "🚀 Direct"
-      - "⛔ Reject"
-
-  - name: 🎮 Games
-    type: select
-    disable-udp: false
-    use:
-      - PROXIES
-    proxies:
-      - "🚀 Direct"
-      - "⛔ Reject"
-
-  - name: 💸 E-Wallet
-    type: select
-    disable-udp: false
-    use:
-      - PROXIES
-    proxies:
-      - "🚀 Direct"
-      - "⛔ Reject"
-
-  - name: 💬 Sosmed
-    type: select
-    disable-udp: false
-    use:
-      - PROXIES
-    proxies:
-      - "🚀 Direct"
-      - "⛔ Reject"
-
-  - name: 🎵 TikTok
-    type: select
-    disable-udp: false
-    use:
-      - PROXIES
-    proxies:
-      - "🚀 Direct"
-      - "⛔ Reject"
+    url: http://www.google.co.id/generate_204
+    interval: 300
+    timeout: 3000
+    tolerance: 50
+    lazy: true
+    expected-status: 204
 
   - name: 🌍 Global
     type: select
-    disable-udp: false
+    proxies:
+      - ⚡ Best Ping
+      - 🚀 Direct
     use:
       - PROXIES
+
+  - name: 🛡️ Ads Block
+    type: select
     proxies:
-      - "🚀 Direct"
-      - "⛔ Reject"
+      - ⛔ Reject
+      - 🚀 Direct
+      - 🌍 Global
+
+  - name: 💸 E-Wallet
+    type: select
+    proxies:
+      - 🌍 Global
+      - ⚡ Best Ping
+      - 🚀 Direct
+      - ⛔ Reject
+    use:
+      - PROXIES
+
+  - name: 🏦 Bank Lokal
+    type: select
+    proxies:
+      - 🌍 Global
+      - ⚡ Best Ping
+      - 🚀 Direct
+      - ⛔ Reject
+    use:
+      - PROXIES
+
+  - name: 🤖 AI
+    type: select
+    proxies:
+      - 🌍 Global
+      - ⚡ Best Ping
+      - 🚀 Direct
+      - ⛔ Reject
+    use:
+      - PROXIES
+
+  - name: 🎥 Meeting Kerja
+    type: select
+    proxies:
+      - 🌍 Global
+      - ⚡ Best Ping
+      - 🚀 Direct
+      - ⛔ Reject
+    use:
+      - PROXIES
+
+  - name: 🛒 Marketplace
+    type: select
+    proxies:
+      - 🌍 Global
+      - ⚡ Best Ping
+      - 🚀 Direct
+      - ⛔ Reject
+    use:
+      - PROXIES
+
+  - name: 💬 Sosmed
+    type: select
+    proxies:
+      - 🌍 Global
+      - ⚡ Best Ping
+      - 🚀 Direct
+      - ⛔ Reject
+    use:
+      - PROXIES
+
+  - name: 🎵 TikTok
+    type: select
+    proxies:
+      - 🌍 Global
+      - ⚡ Best Ping
+      - 🚀 Direct
+      - ⛔ Reject
+    use:
+      - PROXIES
+
+  - name: 📺 Video Premium
+    type: select
+    proxies:
+      - 🌍 Global
+      - ⚡ Best Ping
+      - 🚀 Direct
+      - ⛔ Reject
+    use:
+      - PROXIES
+
+  - name: 📥 Update Download
+    type: select
+    proxies:
+      - 🌍 Global
+      - ⚡ Best Ping
+      - 🚀 Direct
+      - ⛔ Reject
+    use:
+      - PROXIES
+
+  - name: 🎬 Streaming
+    type: select
+    proxies:
+      - 🌍 Global
+      - ⚡ Best Ping
+      - 🚀 Direct
+      - ⛔ Reject
+    use:
+      - PROXIES
+
+  - name: 🎮 Games
+    type: select
+    proxies:
+      - 🌍 Global
+      - ⚡ Best Ping
+      - 🚀 Direct
+      - ⛔ Reject
+    use:
+      - PROXIES
+
+  # Pembungkus DIRECT/REJECT bawaan supaya tampil dengan emoji
+  - name: 🚀 Direct
+    type: select
+    proxies:
+      - DIRECT
+
+  - name: ⛔ Reject
+    type: select
+    proxies:
+      - REJECT
 
 rule-providers:
-  Ads:
-    type: http
-    behavior: classical
-    path: "./rule_provider/oisd_big.yaml"
-    url: https://raw.githubusercontent.com/hillz2/openclash_adblock/main/oisd_big.yaml
-    interval: 28800
   Direct:
     type: file
     behavior: classical
     path: "./rule_provider/direct.yaml"
-  Tiktok:
+  Ads:
     type: file
-    behavior: classical
-    path: "./rule_provider/tiktok.yaml"
+    behavior: domain
+    path: "./rule_provider/adblock.yaml"
   Reject:
     type: file
     behavior: classical
     path: "./rule_provider/reject.yaml"
+  Ewallet:
+    type: file
+    behavior: classical
+    path: "./rule_provider/ewallet.yaml"
+  Bank:
+    type: file
+    behavior: classical
+    path: "./rule_provider/bank.yaml"
+  AI:
+    type: file
+    behavior: classical
+    path: "./rule_provider/ai.yaml"
+  Meeting:
+    type: file
+    behavior: classical
+    path: "./rule_provider/meeting.yaml"
+  Marketplace:
+    type: file
+    behavior: classical
+    path: "./rule_provider/marketplace.yaml"
+  Sosmed:
+    type: file
+    behavior: classical
+    path: "./rule_provider/sosmed.yaml"
+  Tiktok:
+    type: file
+    behavior: classical
+    path: "./rule_provider/tiktok.yaml"
+  Video:
+    type: file
+    behavior: classical
+    path: "./rule_provider/video.yaml"
+  Update:
+    type: file
+    behavior: classical
+    path: "./rule_provider/update.yaml"
   Streaming:
     type: file
     behavior: classical
@@ -105,22 +289,20 @@ rule-providers:
     type: file
     behavior: classical
     path: "./rule_provider/games.yaml"
-  Sosmed:
-    type: file
-    behavior: classical
-    path: "./rule_provider/sosmed.yaml"
-  Ewallet:
-    type: file
-    behavior: classical
-    path: "./rule_provider/ewallet.yaml"
 
 rules:
-  - RULE-SET,Ads,🛡️ Ads Block
-  - RULE-SET,Sosmed,💬 Sosmed
+  - RULE-SET,Direct,🚀 Direct
   - RULE-SET,Ewallet,💸 E-Wallet
+  - RULE-SET,Bank,🏦 Bank Lokal
+  - RULE-SET,Ads,🛡️ Ads Block
+  - RULE-SET,Reject,🛡️ Ads Block
+  - RULE-SET,AI,🤖 AI
+  - RULE-SET,Meeting,🎥 Meeting Kerja
+  - RULE-SET,Marketplace,🛒 Marketplace
+  - RULE-SET,Sosmed,💬 Sosmed
   - RULE-SET,Tiktok,🎵 TikTok
+  - RULE-SET,Video,📺 Video Premium
+  - RULE-SET,Update,📥 Update Download
   - RULE-SET,Streaming,🎬 Streaming
   - RULE-SET,Games,🎮 Games
-  - RULE-SET,Direct,🚀 Direct
-  - RULE-SET,Reject,⛔ Reject
   - MATCH,🌍 Global

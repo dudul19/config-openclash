@@ -35,3 +35,14 @@ payload:
   - DOMAIN-SUFFIX,musemuse.cn
   - DOMAIN-SUFFIX,musical.ly
   - DOMAIN,p16-tiktokcdn-com.akamaized.net
+  - DOMAIN-SUFFIX,byteoversea.com
+  - DOMAIN-SUFFIX,tiktokcdn.com
+  - DOMAIN-SUFFIX,tiktokv.com
+  - DOMAIN-SUFFIX,p16-tiktokcdn-com.akamaized.net
+
+# TikTok tambahan & CapCut
+  - DOMAIN-SUFFIX,tiktokv.us
+  - DOMAIN-SUFFIX,tiktokw.us
+  - DOMAIN-SUFFIX,tiktokcdn-us.com
+  - DOMAIN-SUFFIX,ttwstatic.com
+  - DOMAIN-SUFFIX,capcut.com

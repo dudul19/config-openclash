@@ -1,6 +1,5 @@
 payload:
-# Hotstar
-  - IP-CIDR,198.18.0.1/16
+# Tracker, iklan & situs yang diblokir
   - DOMAIN-SUFFIX,heytapmobile.com
   - DOMAIN-SUFFIX,newrelic.com
   - DOMAIN-SUFFIX,trafficfactory.biz
@@ -40,13 +39,10 @@ payload:
   - DOMAIN,cdn.kena-blok.xyz
   - DOMAIN-KEYWORD,cdnkomikindo.xyz
   - DOMAIN-SUFFIX,nhentai.net
-  
-# Tokopedia
-  - DOMAIN,tokopedia.app.link
-  - DOMAIN,tokopedia.link
+
   # IP-CIRD
-  - IP-CIDR,45.12.2.2/24 #kuronime
-  - IP-CIDR,185.231.223.254/24 #kuronime
+  - IP-CIDR,45.12.2.0/24,no-resolve #kuronime
+  - IP-CIDR,185.231.223.0/24,no-resolve #kuronime
 # > Media.net
   - DOMAIN-SUFFIX,media.net
 # > AdColony
@@ -70,7 +66,6 @@ payload:
   - DOMAIN-SUFFIX,amazonclix.com
   - DOMAIN-SUFFIX,assoc-amazon.com
   - DOMAIN-SUFFIX,analytics.s3.amazonaws.com
-# > # > Analytics ====================
 # > Yahoo
   - DOMAIN-SUFFIX,ads.yahoo.com
   - DOMAIN-SUFFIX,adserver.yahoo.com
@@ -142,7 +137,6 @@ payload:
   - DOMAIN-SUFFIX,cdn.luckyorange.com
 # > Stats WP Plugin
   - DOMAIN-SUFFIX,stats.wp.com
-# > # > Error Trackers ====================
 # > Bugsnag
   - DOMAIN-SUFFIX,notify.bugsnag.com
   - DOMAIN-SUFFIX,sessions.bugsnag.com
@@ -151,7 +145,6 @@ payload:
 # > Sentry
   - DOMAIN-SUFFIX,browser.sentry-cdn.com
   - DOMAIN-SUFFIX,app.getsentry.com
-# > # > Social ====================
 # > Facebook
   - DOMAIN-SUFFIX,pixel.facebook.com
   - DOMAIN-SUFFIX,analytics.facebook.com
@@ -190,7 +183,6 @@ payload:
 # > YouTube
   - DOMAIN-SUFFIX,youtube.cleverads.vn
   - DOMAIN-SUFFIX,ads.youtube.com
-# > # > Mix ====================
 # >  Yahoo
   - DOMAIN-SUFFIX,udc.yahoo.com
   - DOMAIN-SUFFIX,udcm.yahoo.com
@@ -202,7 +194,6 @@ payload:
   - DOMAIN-SUFFIX,config.unityads.unity3d.com
   - DOMAIN-SUFFIX,adserver.unityads.unity3d.com
   - DOMAIN-SUFFIX,auction.unityads.unity3d.com
-# > # > OEM ====================
 # > Realme
   - DOMAIN-SUFFIX,bdapi-in-ads.realmemobile.com
   - DOMAIN-SUFFIX,iot-eu-logser.realme.com
@@ -216,23 +207,26 @@ payload:
   - DOMAIN-SUFFIX,data.ads.oppomobile.com
   - DOMAIN-SUFFIX,g1.ads.oppomobile.com
   - DOMAIN-SUFFIX,dcintl2.push.oppomobile.com
-# > Xiaomi
-  - DOMAIN-KEYWORD,xiaomi.com
-  - DOMAIN-KEYWORD,miui.com
+# Iklan & tracker Xiaomi/MIUI (bukan seluruh xiaomi.com, agar akun Mi, update & tema tetap jalan)
+  - DOMAIN-SUFFIX,ad.xiaomi.com
+  - DOMAIN-SUFFIX,ad.intl.xiaomi.com
+  - DOMAIN-SUFFIX,ad.mi.com
+  - DOMAIN-SUFFIX,data.mistat.xiaomi.com
+  - DOMAIN-SUFFIX,data.mistat.intl.xiaomi.com
+  - DOMAIN-SUFFIX,tracking.miui.com
+  - DOMAIN-SUFFIX,tracking.intl.miui.com
+  - DOMAIN-SUFFIX,adv.sec.miui.com
+  - DOMAIN-SUFFIX,adv.sec.intl.miui.com
   - DOMAIN-SUFFIX,api.ad.xiaomi.com
   - DOMAIN-SUFFIX,app.chat.xiaomi.net
   - DOMAIN-SUFFIX,app.chat.global.xiaomi.net
-  - DOMAIN-SUFFIX,data.mistat.xiaomi.com
-  - DOMAIN-SUFFIX,data.mistat.intl.xiaomi.com
   - DOMAIN-SUFFIX,data.mistat.india.xiaomi.com
   - DOMAIN-SUFFIX,data.mistat.rus.xiaomi.com
   - DOMAIN-SUFFIX,sdkconfig.ad.xiaomi.com
   - DOMAIN-SUFFIX,sdkconfig.ad.intl.xiaomi.com
   - DOMAIN-SUFFIX,globalapi.ad.xiaomi.com
   - DOMAIN-SUFFIX,www.cdn.ad.xiaomi.com
-  - DOMAIN-SUFFIX,tracking.miui.com
   - DOMAIN-SUFFIX,sa.api.intl.miui.com
-  - DOMAIN-SUFFIX,tracking.intl.miui.com
   - DOMAIN-SUFFIX,tracking.india.miui.com
   - DOMAIN-SUFFIX,tracking.rus.miui.com
 # > OnePlus

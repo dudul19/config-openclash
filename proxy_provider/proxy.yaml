@@ -1,46 +1,50 @@
+# Ganti isi contoh di bawah dengan akun VPN kamu.
+#   server     : domain/IP server VPN atau bug (sesuai metode inject kamu)
+#   sni/servername & Host : domain server VPN atau bug
+# Hapus akun contoh yang tidak dipakai.
 proxies:
-- name: Contoh Trojan
-  type: trojan
-  server: yourdomain.com/yourbug.com
-  port: 443
-  password: xxxx-xxxx-xxxx
-  udp: true
-  sni: yourdomain.com/yourbug.com
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /path
-    headers:
-      Host: yourdomain.com/yourbug.com
+  - name: Contoh Trojan
+    type: trojan
+    server: bug.com
+    port: 443
+    password: xxxx-xxxx-xxxx
+    udp: true
+    sni: domainvpn.com
+    skip-cert-verify: true
+    network: ws
+    ws-opts:
+      path: /trojan-ws
+      headers:
+        Host: domainvpn.com
 
-- name: Contoh Vmess
-  type: vmess
-  server: yourdomain.com/yourbug.com
-  port: 443
-  uuid: xxxx-xxxx-xxxx
-  alterId: 0
-  cipher: auto
-  udp: true
-  tls: true
-  skip-cert-verify: true
-  servername: yourdomain.com/yourbug.com
-  network: ws
-  ws-opts:
-    path: /path
-    headers:
-      Host: yourdomain.com/yourbug.com
+  - name: Contoh Vmess
+    type: vmess
+    server: bug.com
+    port: 443
+    uuid: 00000000-0000-0000-0000-000000000000
+    alterId: 0
+    cipher: auto
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: domainvpn.com
+    network: ws
+    ws-opts:
+      path: /vmess
+      headers:
+        Host: domainvpn.com
 
-- name: Contoh Vless
-  type: vless
-  server: yourdomain.com/yourbug.com
-  port: 443
-  uuid: xxxx;xxxx-xxxx
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: yourdomain.com/yourbug.com
-  network: ws
-  ws-opts:
-    path: /path
-    headers:
-      Host: yourdomain.com/yourbug.com
+  - name: Contoh Vless
+    type: vless
+    server: bug.com
+    port: 443
+    uuid: 00000000-0000-0000-0000-000000000000
+    udp: true
+    tls: true
+    skip-cert-verify: true
+    servername: domainvpn.com
+    network: ws
+    ws-opts:
+      path: /vless
+      headers:
+        Host: domainvpn.com

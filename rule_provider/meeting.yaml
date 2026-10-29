@@ -1,0 +1,69 @@
+payload:
+# Teamviewer
+  - DST-PORT,5938
+  - DOMAIN-SUFFIX,teamviewer.com
+
+# AnyDesk
+  - DOMAIN-SUFFIX,net.anydesk.com
+  - IP-CIDR,239.255.102.18/32,no-resolve
+  - DST-PORT,6568
+  - DST-PORT,50001
+  - DST-PORT,50002
+  - DST-PORT,50003
+  - DST-PORT,7070
+
+# ZOOM
+  - DOMAIN-SUFFIX,zoom.us
+  - DOMAIN-SUFFIX,google.zoom.us
+  - DOMAIN-SUFFIX,us02st1.zoom.us
+  - DOMAIN-SUFFIX,us03st1.zoom.us
+  - DOMAIN-SUFFIX,us04st1.zoom.us
+  - DOMAIN-SUFFIX,us02st2.zoom.us
+  - DOMAIN-SUFFIX,us03st2.zoom.us
+  - DOMAIN-SUFFIX,us04st2.zoom.us
+  - DOMAIN-SUFFIX,us02st3.zoom.us
+  - DOMAIN-SUFFIX,us03st3.zoom.us
+  - DOMAIN-SUFFIX,us04st3.zoom.us
+  - DOMAIN-SUFFIX,us02web.zoom.us
+  - DOMAIN-SUFFIX,zoom.ada.support
+  - DOMAIN-SUFFIX,st1.zoom.us
+  - DOMAIN-SUFFIX,us02zpns.zoom.us
+  - DOMAIN-SUFFIX,us04xmppapi.zoom.us
+  - DOMAIN-SUFFIX,us04xmpp1.zoom.us
+  - DOMAIN-SUFFIX,xmpp013.zoom.us
+  - DOMAIN-SUFFIX,logfiles.zoom.us
+  - DOMAIN-SUFFIX,cdn.zoom.us
+  - DOMAIN-SUFFIX,zoom-general.s3.amazonaws.com
+  - DOMAIN-SUFFIX,zoomca193-123-14-89mmr.cloud.zoom.us
+  - DOMAIN-SUFFIX,zoomca193-123-1-56zc.cloud.zoom.us
+  - DST-PORT,8801
+  - DST-PORT,8802
+  - DST-PORT,3478
+  - DST-PORT,3479
+
+# Google Meet & Classroom
+  - DOMAIN-SUFFIX,meet.google.com
+  - DOMAIN-SUFFIX,meetings.googleapis.com
+  - DOMAIN-SUFFIX,classroom.google.com
+  - IP-CIDR,74.125.250.0/24,no-resolve
+  - IP-CIDR,142.250.82.0/24,no-resolve
+
+# Microsoft Teams & Skype
+  - DOMAIN-SUFFIX,teams.microsoft.com
+  - DOMAIN-SUFFIX,teams.live.com
+  - DOMAIN-SUFFIX,skype.com
+  - DOMAIN-SUFFIX,lync.com
+  - IP-CIDR,52.112.0.0/14,no-resolve
+  - IP-CIDR,52.122.0.0/15,no-resolve
+
+# Discord
+  - DOMAIN-SUFFIX,discord.com
+  - DOMAIN-SUFFIX,discord.gg
+  - DOMAIN-SUFFIX,discord.media
+  - DOMAIN-SUFFIX,discordapp.com
+  - DOMAIN-SUFFIX,discordapp.net
+
+# Webex & Slack
+  - DOMAIN-SUFFIX,webex.com
+  - DOMAIN-SUFFIX,slack.com
+  - DOMAIN-SUFFIX,slack-edge.com

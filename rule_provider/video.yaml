@@ -1,0 +1,168 @@
+payload:
+# HBO GO HKG
+  - DOMAIN-SUFFIX,hbogoasia.com
+  - DOMAIN-SUFFIX,hbogoasia.hk
+  - DOMAIN,bcbolthboa-a.akamaihd.net
+  - DOMAIN,players.brightcove.net
+  - DOMAIN,dai3fd1oh325y.cloudfront.net
+  - DOMAIN,44wilhpljf.execute-api.ap-southeast-1.amazonaws.com
+  - DOMAIN,hboasia1-i.akamaihd.net
+  - DOMAIN,hboasia2-i.akamaihd.net
+  - DOMAIN,hboasia3-i.akamaihd.net
+  - DOMAIN,hboasia4-i.akamaihd.net
+  - DOMAIN,hboasia5-i.akamaihd.net
+  - DOMAIN,cf-images.ap-southeast-1.prod.boltdns.net
+  - DOMAIN-SUFFIX,bcbolthboa-a.akamaihd.net
+  - DOMAIN-SUFFIX,cf-images.ap-southeast-1.prod.boltdns.net
+  - DOMAIN-SUFFIX,cinemax.com
+  - DOMAIN-SUFFIX,dai3fd1oh325y.cloudfront.net
+  - DOMAIN-SUFFIX,forthethrone.com
+  - DOMAIN-SUFFIX,hbo.com
+  - DOMAIN-SUFFIX,hboasia.com
+  - DOMAIN-SUFFIX,hboasia1-i.akamaihd.net
+  - DOMAIN-SUFFIX,hboasia2-i.akamaihd.net
+  - DOMAIN-SUFFIX,hboasia3-i.akamaihd.net
+  - DOMAIN-SUFFIX,hboasia4-i.akamaihd.net
+  - DOMAIN-SUFFIX,hboasia5-i.akamaihd.net
+  - DOMAIN-SUFFIX,hboasialive.akamaized.net
+  - DOMAIN-SUFFIX,hbogeo.cust.footprint.net
+  - DOMAIN-SUFFIX,hbogo.com
+  - DOMAIN-SUFFIX,hbogoprod-vod.akamaized.net
+  - DOMAIN-SUFFIX,hbolb.onwardsmg.com
+  - DOMAIN-SUFFIX,hbomax.com
+  - DOMAIN-SUFFIX,hbomaxcdn.com
+  - DOMAIN-SUFFIX,hbonow.com
+  - DOMAIN-SUFFIX,hbounify-prod.evergent.com
+  - DOMAIN-SUFFIX,manifest.prod.boltdns.net
+  - DOMAIN-SUFFIX,maxgo.com
+  - DOMAIN-SUFFIX,now-ashare.com
+  - DOMAIN-SUFFIX,now-tv.com
+  - DOMAIN-SUFFIX,now.com
+  - DOMAIN-SUFFIX,now.com.hk
+  - DOMAIN-SUFFIX,nowe.com
+  - DOMAIN-SUFFIX,nowe.hk
+  - DOMAIN-SUFFIX,players.brightcove.net
+  - DOMAIN-SUFFIX,youboranqs01.com
+
+# Netflix
+  - DOMAIN-SUFFIX,netflix.com
+  - DOMAIN-SUFFIX,netflix.net
+  - DOMAIN-SUFFIX,nflxext.com
+  - DOMAIN-SUFFIX,nflximg.com
+  - DOMAIN-SUFFIX,nflximg.net
+  - DOMAIN-SUFFIX,nflxso.net
+  - DOMAIN-SUFFIX,nflxvideo.net
+  - DOMAIN-SUFFIX,netflixdnstest0.com
+  - DOMAIN-SUFFIX,netflixdnstest1.com
+  - DOMAIN-SUFFIX,netflixdnstest2.com
+  - DOMAIN-SUFFIX,netflixdnstest3.com
+  - DOMAIN-SUFFIX,netflixdnstest4.com
+  - DOMAIN-SUFFIX,netflixdnstest5.com
+  - DOMAIN-SUFFIX,netflixdnstest6.com
+  - DOMAIN-SUFFIX,netflixdnstest7.com
+  - DOMAIN-SUFFIX,netflixdnstest8.com
+  - DOMAIN-SUFFIX,netflixdnstest9.com
+  - DOMAIN-KEYWORD,dualstack.apiproxy-device-prod-nlb-
+  - DOMAIN-KEYWORD,dualstack.ichnaea-web-
+  - IP-CIDR,23.246.0.0/18,no-resolve
+  - IP-CIDR,37.77.184.0/21,no-resolve
+  - IP-CIDR,45.57.0.0/17,no-resolve
+  - IP-CIDR,64.120.128.0/17,no-resolve
+  - IP-CIDR,66.197.128.0/17,no-resolve
+  - IP-CIDR,108.175.32.0/20,no-resolve
+  - IP-CIDR,192.173.64.0/18,no-resolve
+  - IP-CIDR,198.38.96.0/19,no-resolve
+  - IP-CIDR,198.45.48.0/20,no-resolve
+  - IP-CIDR,34.210.42.111/32,no-resolve
+  - IP-CIDR,52.89.124.203/32,no-resolve
+  - IP-CIDR,54.148.37.5/32,no-resolve
+
+# Disney+
+  - DOMAIN-KEYWORD,hotstar
+  - DOMAIN-SUFFIX,hotstar.com
+  - DOMAIN-SUFFIX,expressplay.com
+  - DOMAIN-SUFFIX,bamgrid.com
+  - DOMAIN-SUFFIX,disneyplus.com
+  - DOMAIN-SUFFIX,disney-plus.net
+  - DOMAIN-SUFFIX,disneystreaming.com
+  - DOMAIN-SUFFIX,dssott.com
+  - DOMAIN,cdn.registerdisney.go.com
+  - DOMAIN-KEYWORD,hotstarext.com
+  - DOMAIN-KEYWORD,disneyplus
+  - DOMAIN-SUFFIX,search-api-disney.bamgrid.com
+  - DOMAIN-SUFFIX,starott.com
+
+# Vidio
+  - DOMAIN-SUFFIX,thumbor.prod.vid.id
+  - DOMAIN-SUFFIX,static-playback.prod.vid.id
+  - DOMAIN-SUFFIX,vid.id
+  - DOMAIN-SUFFIX,static-playback-vidio-com.akamaized.net
+  - DOMAIN-SUFFIX,plenty.vidio.com
+  - DOMAIN-SUFFIX,vidio.com
+  - DOMAIN-SUFFIX,www.vidio.com
+  - DOMAIN-SUFFIX,api.vidio.com
+  - DOMAIN-SUFFIX,api-ns.vidio.com
+  - DOMAIN-SUFFIX,media-vidio-com.akamaized.net
+  - DOMAIN-SUFFIX,static-web-prod-vidio.akamaized.net
+  - DOMAIN-SUFFIX,geo-id-media-vidio-com.akamaized.net
+  - DOMAIN-SUFFIX,hermes.vidio.com
+  - DOMAIN-SUFFIX,token-media-vidio-com.akamaized.net
+  - DOMAIN-SUFFIX,etslive-2-vidio-com.akamaized.net
+  - DOMAIN-SUFFIX,live-production.secureswiftcontent.com
+  - DOMAIN-SUFFIX,secureswiftcontent.com
+  - DOMAIN-SUFFIX,vidiocdn.com
+  - DOMAIN-KEYWORD,vidio
+  - DOMAIN-KEYWORD,-vidio-com.akamaized.net
+  - DOMAIN-KEYWORD,-vidio.akamaized.net
+  - DOMAIN-SUFFIX,vidio.com.edgekey.net
+  - DOMAIN-SUFFIX,vidio.com.edgesuite.net
+  - DOMAIN,soup.wetvinfo.com
+
+# WeTV
+  - DOMAIN-SUFFIX,iflix-images.akamaized.net
+  - DOMAIN-SUFFIX,iflix.com
+  - DOMAIN-SUFFIX,v.smtcdns.com
+  - DOMAIN-SUFFIX,v.smtcdns.net
+  - DOMAIN-SUFFIX,vv.video.qq.com
+  - DOMAIN-SUFFIX,wetv.vip
+  - DOMAIN-SUFFIX,wetvinfo.com
+  - IP-CIDR,150.109.28.51/32,no-resolve
+  - DOMAIN-SUFFIX,webrtcpunch.video.qq.com
+
+# VisionPlus
+  - DOMAIN-SUFFIX,visionplus.id
+  - DOMAIN-SUFFIX,dtaarjaj1diy9.cloudfront.net
+  - DOMAIN-SUFFIX,mrpw.ptmnc01.verspective.net
+  - DOMAIN-SUFFIX,rmp-data.com
+
+# RCTI
+  - DOMAIN-SUFFIX,rctiplus.com
+  - DOMAIN-SUFFIX,rctiplus.id
+  - DOMAIN-SUFFIX,rcti.plus
+
+# Prime Video
+  - DOMAIN-SUFFIX,primevideo.com
+  - DOMAIN-SUFFIX,amazonvideo.com
+  - DOMAIN-SUFFIX,aiv-cdn.net
+  - DOMAIN-SUFFIX,aiv-delivery.net
+  - DOMAIN-SUFFIX,pv-cdn.net
+
+# HBO Max
+  - DOMAIN-SUFFIX,max.com
+
+# Viu
+  - DOMAIN-SUFFIX,viu.com
+  - DOMAIN-SUFFIX,viu.tv
+
+# iQIYI
+  - DOMAIN-SUFFIX,iq.com
+  - DOMAIN-SUFFIX,iqiyi.com
+  - DOMAIN-SUFFIX,iqiyipic.com
+
+# Bstation (Bilibili)
+  - DOMAIN-SUFFIX,bilibili.tv
+  - DOMAIN-SUFFIX,biliintl.com
+
+# Catchplay & Mola
+  - DOMAIN-SUFFIX,catchplay.com
+  - DOMAIN-SUFFIX,mola.tv

@@ -78,22 +78,22 @@ payload:
   - DOMAIN-SUFFIX,wit.ai
   - DOMAIN-KEYWORD,m.me
   - DOMAIN-SUFFIX,msngr.com
-  - IP-CIDR,157.240.0.0/16
-  - IP-CIDR,103.4.96.0/22
-  - IP-CIDR,129.134.0.0/17
-  - IP-CIDR,157.240.0.0/17
-  - IP-CIDR,173.252.64.0/19
-  - IP-CIDR,173.252.96.0/19
-  - IP-CIDR,179.60.192.0/22
-  - IP-CIDR,185.60.216.0/22
-  - IP-CIDR,204.15.20.0/22
-  - IP-CIDR,31.13.24.0/21
-  - IP-CIDR,31.13.64.0/18
-  - IP-CIDR,45.64.40.0/22
-  - IP-CIDR,66.220.144.0/20
-  - IP-CIDR,69.171.224.0/19
-  - IP-CIDR,69.63.176.0/20
-  - IP-CIDR,74.119.76.0/22
+  - IP-CIDR,157.240.0.0/16,no-resolve
+  - IP-CIDR,103.4.96.0/22,no-resolve
+  - IP-CIDR,129.134.0.0/17,no-resolve
+  - IP-CIDR,157.240.0.0/17,no-resolve
+  - IP-CIDR,173.252.64.0/19,no-resolve
+  - IP-CIDR,173.252.96.0/19,no-resolve
+  - IP-CIDR,179.60.192.0/22,no-resolve
+  - IP-CIDR,185.60.216.0/22,no-resolve
+  - IP-CIDR,204.15.20.0/22,no-resolve
+  - IP-CIDR,31.13.24.0/21,no-resolve
+  - IP-CIDR,31.13.64.0/18,no-resolve
+  - IP-CIDR,45.64.40.0/22,no-resolve
+  - IP-CIDR,66.220.144.0/20,no-resolve
+  - IP-CIDR,69.171.224.0/19,no-resolve
+  - IP-CIDR,69.63.176.0/20,no-resolve
+  - IP-CIDR,74.119.76.0/22,no-resolve
 
 # Line
   - DOMAIN-SUFFIX,lin.ee
@@ -104,22 +104,22 @@ payload:
   - DOMAIN-SUFFIX,line-scdn.net
   - DOMAIN-SUFFIX,nhncorp.jp
   - DOMAIN-SUFFIX,naver.jp
-  - IP-CIDR,103.2.28.0/22
-  - IP-CIDR,119.235.224.0/21
-  - IP-CIDR,119.235.232.0/23
-  - IP-CIDR,119.235.235.0/24
-  - IP-CIDR,119.235.236.0/23
-  - IP-CIDR,125.6.146.0/24
-  - IP-CIDR,125.6.149.0/24
-  - IP-CIDR,125.6.190.0/24
-  - IP-CIDR,125.209.208.0/20
-  - IP-CIDR,203.104.103.0/24
-  - IP-CIDR,203.104.128.0/20
-  - IP-CIDR,203.174.66.64/26
-  - IP-CIDR,203.174.77.0/24
-  - IP-CIDR,103.2.30.0/23
-  - IP-CIDR,147.92.128.0/17
-  - IP-CIDR,203.104.144.0/21
+  - IP-CIDR,103.2.28.0/22,no-resolve
+  - IP-CIDR,119.235.224.0/21,no-resolve
+  - IP-CIDR,119.235.232.0/23,no-resolve
+  - IP-CIDR,119.235.235.0/24,no-resolve
+  - IP-CIDR,119.235.236.0/23,no-resolve
+  - IP-CIDR,125.6.146.0/24,no-resolve
+  - IP-CIDR,125.6.149.0/24,no-resolve
+  - IP-CIDR,125.6.190.0/24,no-resolve
+  - IP-CIDR,125.209.208.0/20,no-resolve
+  - IP-CIDR,203.104.103.0/24,no-resolve
+  - IP-CIDR,203.104.128.0/20,no-resolve
+  - IP-CIDR,203.174.66.64/26,no-resolve
+  - IP-CIDR,203.174.77.0/24,no-resolve
+  - IP-CIDR,103.2.30.0/23,no-resolve
+  - IP-CIDR,147.92.128.0/17,no-resolve
+  - IP-CIDR,203.104.144.0/21,no-resolve
   - DOMAIN-SUFFIX,linecorp.com
   - DOMAIN-KEYWORD,naver
 
@@ -146,22 +146,22 @@ payload:
   - DOMAIN-SUFFIX,usercontent.dev
   - DOMAIN-KEYWORD,nicegram
   - DOMAIN-KEYWORD,telegram
-  - IP-CIDR,91.108.4.0/22
-  - IP-CIDR,91.108.8.0/22
-  - IP-CIDR,91.108.12.0/22
-  - IP-CIDR,91.108.16.0/22
-  - IP-CIDR,91.108.20.0/22
-  - IP-CIDR,91.108.56.0/22
-  - IP-CIDR,149.154.160.0/20
-  - IP-CIDR,109.239.140.0/24
-  - IP-CIDR,185.76.151.0/24
-  - IP-CIDR,91.105.192.0/23
-  - IP-CIDR,91.108.0.0/16
-  - IP-CIDR,95.161.64.0/20
-  - IP-CIDR6,2001:67c:4e8::/48
-  - IP-CIDR6,2001:b28:f23c::/47
-  - IP-CIDR6,2001:b28:f23f::/48
-  - IP-CIDR6,2a0a:f280::/32
+  - IP-CIDR,91.108.4.0/22,no-resolve
+  - IP-CIDR,91.108.8.0/22,no-resolve
+  - IP-CIDR,91.108.12.0/22,no-resolve
+  - IP-CIDR,91.108.16.0/22,no-resolve
+  - IP-CIDR,91.108.20.0/22,no-resolve
+  - IP-CIDR,91.108.56.0/22,no-resolve
+  - IP-CIDR,149.154.160.0/20,no-resolve
+  - IP-CIDR,109.239.140.0/24,no-resolve
+  - IP-CIDR,185.76.151.0/24,no-resolve
+  - IP-CIDR,91.105.192.0/23,no-resolve
+  - IP-CIDR,91.108.0.0/16,no-resolve
+  - IP-CIDR,95.161.64.0/20,no-resolve
+  - IP-CIDR6,2001:67c:4e8::/48,no-resolve
+  - IP-CIDR6,2001:b28:f23c::/47,no-resolve
+  - IP-CIDR6,2001:b28:f23f::/48,no-resolve
+  - IP-CIDR6,2a0a:f280::/32,no-resolve
 
 # Twitter
   - DOMAIN-SUFFIX,pscp.tv
@@ -186,40 +186,40 @@ payload:
   - DOMAIN-SUFFIX,twitteroauth.com
   - DOMAIN-SUFFIX,twitterstat.us
   - DOMAIN-SUFFIX,twtrdns.net
-  - IP-CIDR,104.244.42.0/21
-  - IP-CIDR,192.133.76.0/22
-  - IP-CIDR,199.16.156.0/22
-  - IP-CIDR,199.59.148.0/22
-  - IP-CIDR,199.96.56.0/21
-  - IP-CIDR,202.160.128.0/22
-  - IP-CIDR,209.237.192.0/19
-  - IP-CIDR,69.195.160.0/19 
+  - IP-CIDR,104.244.40.0/21,no-resolve
+  - IP-CIDR,192.133.76.0/22,no-resolve
+  - IP-CIDR,199.16.156.0/22,no-resolve
+  - IP-CIDR,199.59.148.0/22,no-resolve
+  - IP-CIDR,199.96.56.0/21,no-resolve
+  - IP-CIDR,202.160.128.0/22,no-resolve
+  - IP-CIDR,209.237.192.0/19,no-resolve
+  - IP-CIDR,69.195.160.0/19,no-resolve
 
-# Spotify
-  - DOMAIN-SUFFIX,open.spotify.com
-  - DOMAIN-SUFFIX,audio-ak-spotify-com.akamaized.net
-  - DOMAIN-SUFFIX,byspotify.com
-  - DOMAIN-SUFFIX,heads4-ak-spotify-com.akamaized.net
-  - DOMAIN-SUFFIX,pscdn.co
-  - DOMAIN-SUFFIX,scdn.co
-  - DOMAIN-SUFFIX,spoti.fi
-  - DOMAIN-SUFFIX,spotify-com.akamaized.net
-  - DOMAIN-SUFFIX,spotify-everywhere.com
-  - DOMAIN-SUFFIX,spotify.com
-  - DOMAIN-SUFFIX,spotify.design
-  - DOMAIN-SUFFIX,spotifycdn.com
-  - DOMAIN-SUFFIX,spotifycdn.net
-  - DOMAIN-SUFFIX,spotifycharts.com
-  - DOMAIN-SUFFIX,spotifycodes.com
-  - DOMAIN-SUFFIX,spotifyforbrands.com
-  - DOMAIN-SUFFIX,spotifyjobs.com
-  - DOMAIN-KEYWORD,-spotify-com
-  - DOMAIN-KEYWORD,spotify.com
+# Threads
+  - DOMAIN-SUFFIX,threads.net
+  - DOMAIN-SUFFIX,threads.com
 
-# Deezer
-  - DOMAIN-SUFFIX,deezer.com
-  - DOMAIN-SUFFIX,dzcdn.net
+# Snapchat
+  - DOMAIN-SUFFIX,snapchat.com
+  - DOMAIN-SUFFIX,sc-cdn.net
+  - DOMAIN-SUFFIX,sc-static.net
 
-# JOOX
-  - DOMAIN-SUFFIX,joox.com
-  - DOMAIN-KEYWORD,jooxweb-api
+# Pinterest
+  - DOMAIN-SUFFIX,pinterest.com
+  - DOMAIN-SUFFIX,pinimg.com
+
+# Reddit
+  - DOMAIN-SUFFIX,reddit.com
+  - DOMAIN-SUFFIX,redd.it
+  - DOMAIN-SUFFIX,redditmedia.com
+  - DOMAIN-SUFFIX,redditstatic.com
+
+# Signal
+  - DOMAIN-SUFFIX,signal.org
+  - DOMAIN-SUFFIX,whispersystems.org
+  - DOMAIN-SUFFIX,signal.art
+
+# LinkedIn & Bluesky
+  - DOMAIN-SUFFIX,linkedin.com
+  - DOMAIN-SUFFIX,licdn.com
+  - DOMAIN-SUFFIX,bsky.app

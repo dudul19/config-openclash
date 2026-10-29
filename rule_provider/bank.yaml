@@ -1,0 +1,56 @@
+payload:
+# Jenius / BTPN
+  - DOMAIN-KEYWORD,app.btpn
+  - DOMAIN-KEYWORD,jenius-assets.jenius
+  - DOMAIN-KEYWORD,api.btpn
+  - DOMAIN-KEYWORD,btpn.com
+  - DOMAIN-KEYWORD,jenius.com
+
+# BCA / blu
+  - DOMAIN-KEYWORD,klikbca
+  - DOMAIN-SUFFIX,bca.co.id
+  - DOMAIN-SUFFIX,klikbca.com
+  - DOMAIN-SUFFIX,bcasyariah.co.id
+  - DOMAIN-SUFFIX,blubybcadigital.id
+  - DST-PORT,33303
+
+# BRI / BRImo
+  - DOMAIN-SUFFIX,bri.co.id
+  - DOMAIN-KEYWORD,brimo
+
+# Mandiri / Livin
+  - DOMAIN-SUFFIX,bankmandiri.co.id
+
+# BNI / wondr
+  - DOMAIN-SUFFIX,bni.co.id
+
+# BSI
+  - DOMAIN-SUFFIX,bankbsi.co.id
+
+# BTN
+  - DOMAIN-SUFFIX,btn.co.id
+
+# CIMB Niaga / OCTO
+  - DOMAIN-SUFFIX,cimbniaga.co.id
+
+# Permata
+  - DOMAIN-SUFFIX,permatabank.com
+
+# Danamon
+  - DOMAIN-SUFFIX,danamon.co.id
+
+# Bank Jago
+  - DOMAIN-SUFFIX,jago.com
+
+# SeaBank
+  - DOMAIN-SUFFIX,seabank.co.id
+
+# Allo Bank / Neo Bank
+  - DOMAIN-SUFFIX,allobank.com
+  - DOMAIN-SUFFIX,bankneocommerce.co.id
+
+# Pemerintah, kampus, sekolah & layanan lokal
+  - DOMAIN-SUFFIX,go.id
+  - DOMAIN-SUFFIX,ac.id
+  - DOMAIN-SUFFIX,sch.id
+  - DOMAIN-SUFFIX,pln.co.id

@@ -1,0 +1,230 @@
+# AI + Meeting + Marketplace + Update
+payload:
+# ---- dari ai.yaml ----
+# OpenAI / ChatGPT / Sora
+  - DOMAIN-SUFFIX,openai.com
+  - DOMAIN-SUFFIX,chatgpt.com
+  - DOMAIN-SUFFIX,chat.com
+  - DOMAIN-SUFFIX,oaistatic.com
+  - DOMAIN-SUFFIX,oaiusercontent.com
+  - DOMAIN-SUFFIX,sora.com
+  - DOMAIN,openaiapi-site.azureedge.net
+  - DOMAIN,production-openaicom-storage.azureedge.net
+
+# Claude / Anthropic
+  - DOMAIN-SUFFIX,claude.ai
+  - DOMAIN-SUFFIX,claude.com
+  - DOMAIN-SUFFIX,anthropic.com
+  - DOMAIN-SUFFIX,claudeusercontent.com
+  - DOMAIN-SUFFIX,clau.de
+
+# Google Gemini / AI Studio / NotebookLM
+  - DOMAIN-SUFFIX,gemini.google.com
+  - DOMAIN-SUFFIX,bard.google.com
+  - DOMAIN-SUFFIX,aistudio.google.com
+  - DOMAIN-SUFFIX,makersuite.google.com
+  - DOMAIN-SUFFIX,notebooklm.google.com
+  - DOMAIN-SUFFIX,notebooklm.google
+  - DOMAIN-SUFFIX,generativelanguage.googleapis.com
+  - DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
+  - DOMAIN-SUFFIX,alkalimakersuite-pa.clients6.google.com
+  - DOMAIN-SUFFIX,labs.google
+  - DOMAIN-SUFFIX,deepmind.com
+  - DOMAIN-SUFFIX,deepmind.google
+
+# Microsoft Copilot
+  - DOMAIN-SUFFIX,copilot.microsoft.com
+  - DOMAIN-SUFFIX,sydney.bing.com
+  - DOMAIN-SUFFIX,edgeservices.bing.com
+
+# Perplexity
+  - DOMAIN-SUFFIX,perplexity.ai
+  - DOMAIN-SUFFIX,pplx.ai
+
+# Grok / DeepSeek / Meta AI / lainnya
+  - DOMAIN-SUFFIX,x.ai
+  - DOMAIN-SUFFIX,grok.com
+  - DOMAIN-SUFFIX,deepseek.com
+  - DOMAIN-SUFFIX,meta.ai
+  - DOMAIN-SUFFIX,mistral.ai
+  - DOMAIN-SUFFIX,poe.com
+  - DOMAIN-SUFFIX,character.ai
+  - DOMAIN-SUFFIX,huggingface.co
+  - DOMAIN-SUFFIX,cursor.com
+# ---- dari meeting.yaml ----
+# Teamviewer
+  - DST-PORT,5938
+  - DOMAIN-SUFFIX,teamviewer.com
+
+# AnyDesk
+  - DOMAIN-SUFFIX,net.anydesk.com
+  - IP-CIDR,239.255.102.18/32,no-resolve
+  - DST-PORT,6568
+  - DST-PORT,50001
+  - DST-PORT,50002
+  - DST-PORT,50003
+  - DST-PORT,7070
+
+# ZOOM
+  - DOMAIN-SUFFIX,zoom.us
+  - DOMAIN-SUFFIX,google.zoom.us
+  - DOMAIN-SUFFIX,us02st1.zoom.us
+  - DOMAIN-SUFFIX,us03st1.zoom.us
+  - DOMAIN-SUFFIX,us04st1.zoom.us
+  - DOMAIN-SUFFIX,us02st2.zoom.us
+  - DOMAIN-SUFFIX,us03st2.zoom.us
+  - DOMAIN-SUFFIX,us04st2.zoom.us
+  - DOMAIN-SUFFIX,us02st3.zoom.us
+  - DOMAIN-SUFFIX,us03st3.zoom.us
+  - DOMAIN-SUFFIX,us04st3.zoom.us
+  - DOMAIN-SUFFIX,us02web.zoom.us
+  - DOMAIN-SUFFIX,zoom.ada.support
+  - DOMAIN-SUFFIX,st1.zoom.us
+  - DOMAIN-SUFFIX,us02zpns.zoom.us
+  - DOMAIN-SUFFIX,us04xmppapi.zoom.us
+  - DOMAIN-SUFFIX,us04xmpp1.zoom.us
+  - DOMAIN-SUFFIX,xmpp013.zoom.us
+  - DOMAIN-SUFFIX,logfiles.zoom.us
+  - DOMAIN-SUFFIX,cdn.zoom.us
+  - DOMAIN-SUFFIX,zoom-general.s3.amazonaws.com
+  - DOMAIN-SUFFIX,zoomca193-123-14-89mmr.cloud.zoom.us
+  - DOMAIN-SUFFIX,zoomca193-123-1-56zc.cloud.zoom.us
+  - DST-PORT,8801
+  - DST-PORT,8802
+  - DST-PORT,3478
+  - DST-PORT,3479
+
+# Google Meet & Classroom
+  - DOMAIN-SUFFIX,meet.google.com
+  - DOMAIN-SUFFIX,meetings.googleapis.com
+  - DOMAIN-SUFFIX,classroom.google.com
+  - IP-CIDR,74.125.250.0/24,no-resolve
+  - IP-CIDR,142.250.82.0/24,no-resolve
+
+# Microsoft Teams & Skype
+  - DOMAIN-SUFFIX,teams.microsoft.com
+  - DOMAIN-SUFFIX,teams.live.com
+  - DOMAIN-SUFFIX,skype.com
+  - DOMAIN-SUFFIX,lync.com
+  - IP-CIDR,52.112.0.0/14,no-resolve
+  - IP-CIDR,52.122.0.0/15,no-resolve
+
+# Discord
+  - DOMAIN-SUFFIX,discord.com
+  - DOMAIN-SUFFIX,discord.gg
+  - DOMAIN-SUFFIX,discord.media
+  - DOMAIN-SUFFIX,discordapp.com
+  - DOMAIN-SUFFIX,discordapp.net
+
+# Webex & Slack
+  - DOMAIN-SUFFIX,webex.com
+  - DOMAIN-SUFFIX,slack.com
+  - DOMAIN-SUFFIX,slack-edge.com
+# ---- dari marketplace.yaml ----
+# Shopee
+  - DOMAIN-KEYWORD,shopee
+  - DOMAIN-SUFFIX,shopee.co.id
+  - DOMAIN-SUFFIX,shopee.com
+  - DOMAIN-SUFFIX,shopee.com.br
+  - DOMAIN-SUFFIX,shopee.com.my
+  - DOMAIN-SUFFIX,shopee.ph
+  - DOMAIN-SUFFIX,shopee.sg
+  - DOMAIN-SUFFIX,shopee.tw
+  - DOMAIN-SUFFIX,shopee.vn
+  - DOMAIN-SUFFIX,shopeemobile.com
+  - DOMAIN-SUFFIX,susercontent.com
+  # Shopee mall, rincian pesanan
+  - DOMAIN-KEYWORD,mall.shopee
+  # Rule screenshot bukti barang sampai
+  - DOMAIN-KEYWORD,electronicproof.ssc.shopee
+  # Shopee LIVE
+  - DOMAIN-KEYWORD,livestream.shopee
+  - DOMAIN-KEYWORD,live.shopee
+  - DOMAIN-KEYWORD,livetech.shopee
+  - DOMAIN-KEYWORD,chatroom-live.shopee
+  - IP-CIDR,202.179.138.114/32,no-resolve
+  - IP-CIDR,128.1.61.66/32,no-resolve
+  - IP-CIDR,150.109.91.8/32,no-resolve
+  - IP-CIDR,36.66.3.172/32,no-resolve
+  - IP-CIDR,138.113.116.5/32,no-resolve
+  - IP-CIDR,36.66.223.235/32,no-resolve
+  - IP-CIDR,150.109.91.7/32,no-resolve
+  - IP-CIDR,117.103.116.29/32,no-resolve
+  - DST-PORT,61947
+  - DST-PORT,64355
+  - DST-PORT,61948
+  # Shopee Login Reward
+  - DOMAIN-KEYWORD,games.shopee
+  - DOMAIN-KEYWORD,play.shopee
+  # ShopeeFood
+  - DOMAIN-KEYWORD,foody.shopee
+  # Rule nilai produk
+  - DOMAIN-KEYWORD,rating.shopee
+
+# Tokopedia
+  - DOMAIN-KEYWORD,tokopedia.link
+  - DOMAIN-KEYWORD,tokopedia.com
+  - DOMAIN-KEYWORD,tokopedia.gw-dv
+  - DOMAIN-KEYWORD,tokopedia
+  - DOMAIN-SUFFIX,tokopedia.net
+
+# TikTok Shop
+  - DOMAIN-SUFFIX,shop.tiktok.com
+  - DOMAIN-SUFFIX,seller-id.tiktok.com
+
+# Lazada
+  - DOMAIN-KEYWORD,lazada
+  - DOMAIN-KEYWORD,lzd-img
+  - DOMAIN-SUFFIX,lazcdn.com
+  - DOMAIN-SUFFIX,slatic.net
+
+# Blibli
+  - DOMAIN-SUFFIX,blibli.com
+  - DOMAIN-SUFFIX,static-src.com
+
+# Bukalapak
+  - DOMAIN-SUFFIX,bukalapak.com
+
+# Other
+  - DOMAIN-SUFFIX,jualan.me
+  - DOMAIN-SUFFIX,bukaolshop.com
+  - DOMAIN-SUFFIX,bukaolshop.net
+# ---- dari update.yaml ----
+# Google Play Store & update Android/Chrome
+  - DOMAIN,play.googleapis.com
+  - DOMAIN,play-fe.googleapis.com
+  - DOMAIN,android.clients.google.com
+  - DOMAIN,update.googleapis.com
+  - DOMAIN-SUFFIX,dl.google.com
+  - DOMAIN-SUFFIX,dl.l.google.com
+  - DOMAIN-SUFFIX,gvt1.com
+
+# Windows Update & Microsoft Store
+  - DOMAIN-SUFFIX,windowsupdate.com
+  - DOMAIN-SUFFIX,update.microsoft.com
+  - DOMAIN-SUFFIX,delivery.mp.microsoft.com
+  - DOMAIN-SUFFIX,download.microsoft.com
+  - DOMAIN-SUFFIX,download.windowsupdate.com
+
+# Apple update & App Store download
+  - DOMAIN-SUFFIX,swcdn.apple.com
+  - DOMAIN-SUFFIX,swdist.apple.com
+  - DOMAIN-SUFFIX,updates.cdn-apple.com
+  - DOMAIN-SUFFIX,mesu.apple.com
+  - DOMAIN-SUFFIX,appldnld.apple.com
+  - DOMAIN-SUFFIX,iosapps.itunes.apple.com
+  - DOMAIN-SUFFIX,osxapps.itunes.apple.com
+
+# Xiaomi / MIUI / HyperOS OTA
+  - DOMAIN-SUFFIX,update.miui.com
+  - DOMAIN-SUFFIX,update.intl.miui.com
+  - DOMAIN-SUFFIX,bigota.d.miui.com
+  - DOMAIN-SUFFIX,ota.d.miui.com
+
+# Samsung OTA
+  - DOMAIN-SUFFIX,ospserver.net
+
+# Steam & Epic download
+  - DOMAIN-SUFFIX,steamcontent.com
+  - DOMAIN-SUFFIX,download.epicgames.com
+  - DOMAIN-SUFFIX,epicgames-download1.akamaized.net

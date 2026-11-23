@@ -6,16 +6,17 @@
 
 # Config OpenClash
 
-A short rule config for OpenClash with the Clash Meta (mihomo) core. Two files:
-`dudul.yaml` holds the groups and rules, `proxy_provider/proxy.yaml` holds your
-VPN accounts. Moving to another server only means editing `proxy.yaml`; nothing
+A simple rule config for OpenClash with the Clash Meta (mihomo) core.
+`dudul.yaml` holds the groups, `rule_provider/` holds the domain lists and
+`proxy_provider/proxy.yaml` holds your VPN accounts. Moving to another server only means editing `proxy.yaml`; nothing
 else has to be picked again.
 
 ## Files
 
 | File | What it holds |
 |---|---|
-| `dudul.yaml` | DNS, sniffer, groups and every rule (about 85 lines of rules, no rule files) |
+| `dudul.yaml` | DNS, sniffer, groups and the rule order |
+| `rule_provider/*.yaml` | Domain lists, one file per group (8 files) |
 | `proxy_provider/proxy.yaml` | Your VPN accounts (Trojan, VMess, VLESS examples inside) |
 | `config/dudul.yaml` | Same file as `dudul.yaml`, kept for old links |
 
@@ -24,14 +25,15 @@ else has to be picked again.
 | Group | Matches | Choices | Default |
 |---|---|---|---|
 | ⚡ Best Ping | All accounts in `proxy.yaml` | Automatic (lowest ping, checked every 5 minutes) | – |
-| 🌍 Global | Everything not listed below | ⚡ Best Ping, DIRECT, any account | ⚡ Best Ping |
-| 🏦 Bank | BCA, BRI/BRImo, Mandiri, BNI, BSI, BTN, CIMB, Jago, SeaBank, Jenius, DANA, GoPay, OVO, LinkAja, Flip | 🌍 Global, ⚡ Best Ping, DIRECT | 🌍 Global |
-| 💬 Sosmed | WhatsApp, Instagram, Facebook, Messenger, Threads, TikTok, X, Telegram | 🌍 Global, ⚡ Best Ping, DIRECT | 🌍 Global |
-| 🎬 Streaming | YouTube, Netflix, Spotify, Vidio, Disney+ Hotstar | 🌍 Global, ⚡ Best Ping, DIRECT | 🌍 Global |
-| 🎮 Games | Free Fire, Mobile Legends, PUBG, CoDM, Roblox, Genshin/HSR/ZZZ, Valorant, Steam | 🌍 Global, ⚡ Best Ping, DIRECT | 🌍 Global |
-| 🛡️ Ads Block | Google ads, in-app ad networks (AppLovin, Unity, Vungle, InMobi, ...) | REJECT, DIRECT | REJECT |
+| 🌍 Global | Everything not in a rule file | ⚡ Best Ping, DIRECT, any account | ⚡ Best Ping |
+| 🏦 Bank | `bank.yaml`: local banks + e-wallets (DANA, GoPay, OVO, ShopeePay, ...) | 🌍 Global, ⚡ Best Ping, DIRECT | 🌍 Global |
+| 💬 Sosmed | `sosmed.yaml`: WhatsApp, Instagram, Facebook, X, Telegram, TikTok, ... | 🌍 Global, ⚡ Best Ping, DIRECT | 🌍 Global |
+| 🎬 Streaming | `streaming.yaml`: YouTube, Google, Netflix, Spotify, Vidio, HBO, ... | 🌍 Global, ⚡ Best Ping, DIRECT | 🌍 Global |
+| 🎮 Games | `games.yaml`: Free Fire, Mobile Legends, PUBG, CoDM, ... |
+| 📦 Lainnya | `lainnya.yaml`: AI (ChatGPT, Gemini, ...), meeting (Zoom, Meet, ...), marketplace (Shopee, Tokopedia, ...), Play Store updates | 🌍 Global, ⚡ Best Ping, DIRECT | 🌍 Global | 🌍 Global, ⚡ Best Ping, DIRECT | 🌍 Global |
+| 🛡️ Ads Block | `adblock.yaml` (oisd big) + `reject.yaml` (trackers) | REJECT, DIRECT | REJECT |
 
-LAN and local IPs always go DIRECT.
+`direct.yaml` (LAN and local IPs) always goes DIRECT.
 
 Only 🌍 Global lists the accounts. The other groups point at 🌍 Global, so when
 you change servers they follow it on their own.
@@ -42,8 +44,9 @@ you change servers they follow it on their own.
 2. Config Manage: upload `dudul.yaml`.
 3. Copy `proxy_provider/proxy.yaml` to `/etc/openclash/proxy_provider/proxy.yaml`
    (Config Editor or File Manager).
-4. Put your accounts in `proxy.yaml` (see below).
-5. Commit settings, then Apply.
+4. Copy the `rule_provider/` folder to `/etc/openclash/rule_provider/`.
+5. Put your accounts in `proxy.yaml` (see below).
+6. Commit settings, then Apply.
 
 ## Change server
 
@@ -62,13 +65,13 @@ Account fields:
 
 ## Add a rule
 
-Add one line in `rules:` in `dudul.yaml`, above `MATCH`:
+Add one line to the matching file in `rule_provider/`, for example `sosmed.yaml`:
 
 ```yaml
-  - DOMAIN-SUFFIX,example.com,💬 Sosmed
+  - DOMAIN-SUFFIX,example.com
 ```
 
-The last part is the group name, or `DIRECT` / `REJECT`.
+`adblock.yaml` uses the short form `- '+.example.com'`.
 
 ## Lower ping
 

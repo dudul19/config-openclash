@@ -1,22 +1,21 @@
 # ==========================================================
-#  Config OpenClash Full Rule - Mr Dudul
+#  Config OpenClash - Mr Dudul
 #  Core: Clash Meta (mihomo)
+#  Pindah server: cukup edit proxy_provider/proxy.yaml
 # ==========================================================
 
 mode: rule
 log-level: warning
 ipv6: false
 allow-lan: true
-
-# --- Bikin ping (delay test) lebih imut & koneksi lebih cepat ---
-unified-delay: true        # ping dihitung tanpa handshake TLS/WS -> angka lebih kecil & stabil
-tcp-concurrent: true       # konek ke semua IP hasil DNS sekaligus, ambil yang paling cepat
-find-process-mode: "off"    # router tidak perlu cek proses, hemat CPU
+unified-delay: true
+tcp-concurrent: true
+find-process-mode: "off"
 keep-alive-interval: 15
 keep-alive-idle: 30
 
 profile:
-  store-selected: true     # pilihan akun di dashboard tidak hilang setelah restart
+  store-selected: true
   store-fake-ip: true
 
 sniffer:
@@ -49,28 +48,26 @@ dns:
     - "+.msftncsi.com"
     - "+.pool.ntp.org"
     - "time.*.com"
-    - "time.*.gov"
     - "ntp.*.com"
     - "+.stun.*.*"
-    - "+.stun.*.*.*"
     - "stun.*.*"
     - "stun.*.*.*"
     - "+.srv.nintendo.net"
     - "+.stun.playstation.net"
-    - "xbox.*.microsoft.com"
     - "+.xboxlive.com"
-    - "localhost.ptlogin2.qq.com"
   default-nameserver:
     - 8.8.8.8
     - 1.1.1.1
   nameserver:
     - 8.8.8.8
     - 1.1.1.1
-    - 8.8.4.4
   proxy-server-nameserver:
     - 8.8.8.8
     - 1.1.1.1
 
+# ---------------------------------------------------------
+#  Akun VPN ada di file ini. Ganti server = edit file ini saja.
+# ---------------------------------------------------------
 proxy-providers:
   PROXIES:
     type: file
@@ -83,8 +80,11 @@ proxy-providers:
       lazy: true
       expected-status: 204
 
+# ---------------------------------------------------------
+#  Grup. Hanya Global yang berisi daftar akun; grup lain
+#  ikut Global, jadi tidak perlu dipilih ulang saat ganti server.
+# ---------------------------------------------------------
 proxy-groups:
-  # Otomatis pilih akun dengan ping paling kecil
   - name: ⚡ Best Ping
     type: url-test
     use:
@@ -100,209 +100,126 @@ proxy-groups:
     type: select
     proxies:
       - ⚡ Best Ping
-      - 🚀 Direct
+      - DIRECT
     use:
       - PROXIES
 
-  - name: 🛡️ Ads Block
+  - name: 🏦 Bank
     type: select
-    proxies:
-      - ⛔ Reject
-      - 🚀 Direct
-      - 🌍 Global
-
-  - name: 💸 E-Wallet
-    type: select
-    proxies:
-      - 🌍 Global
-      - ⚡ Best Ping
-      - 🚀 Direct
-      - ⛔ Reject
-    use:
-      - PROXIES
-
-  - name: 🏦 Bank Lokal
-    type: select
-    proxies:
-      - 🌍 Global
-      - ⚡ Best Ping
-      - 🚀 Direct
-      - ⛔ Reject
-    use:
-      - PROXIES
-
-  - name: 🤖 AI
-    type: select
-    proxies:
-      - 🌍 Global
-      - ⚡ Best Ping
-      - 🚀 Direct
-      - ⛔ Reject
-    use:
-      - PROXIES
-
-  - name: 🎥 Meeting Kerja
-    type: select
-    proxies:
-      - 🌍 Global
-      - ⚡ Best Ping
-      - 🚀 Direct
-      - ⛔ Reject
-    use:
-      - PROXIES
-
-  - name: 🛒 Marketplace
-    type: select
-    proxies:
-      - 🌍 Global
-      - ⚡ Best Ping
-      - 🚀 Direct
-      - ⛔ Reject
-    use:
-      - PROXIES
+    proxies: [🌍 Global, ⚡ Best Ping, DIRECT]
 
   - name: 💬 Sosmed
     type: select
-    proxies:
-      - 🌍 Global
-      - ⚡ Best Ping
-      - 🚀 Direct
-      - ⛔ Reject
-    use:
-      - PROXIES
-
-  - name: 🎵 TikTok
-    type: select
-    proxies:
-      - 🌍 Global
-      - ⚡ Best Ping
-      - 🚀 Direct
-      - ⛔ Reject
-    use:
-      - PROXIES
-
-  - name: 📺 Video Premium
-    type: select
-    proxies:
-      - 🌍 Global
-      - ⚡ Best Ping
-      - 🚀 Direct
-      - ⛔ Reject
-    use:
-      - PROXIES
-
-  - name: 📥 Update Download
-    type: select
-    proxies:
-      - 🌍 Global
-      - ⚡ Best Ping
-      - 🚀 Direct
-      - ⛔ Reject
-    use:
-      - PROXIES
+    proxies: [🌍 Global, ⚡ Best Ping, DIRECT]
 
   - name: 🎬 Streaming
     type: select
-    proxies:
-      - 🌍 Global
-      - ⚡ Best Ping
-      - 🚀 Direct
-      - ⛔ Reject
-    use:
-      - PROXIES
+    proxies: [🌍 Global, ⚡ Best Ping, DIRECT]
 
   - name: 🎮 Games
     type: select
-    proxies:
-      - 🌍 Global
-      - ⚡ Best Ping
-      - 🚀 Direct
-      - ⛔ Reject
-    use:
-      - PROXIES
+    proxies: [🌍 Global, ⚡ Best Ping, DIRECT]
 
-  # Pembungkus DIRECT/REJECT bawaan supaya tampil dengan emoji
-  - name: 🚀 Direct
+  - name: 🛡️ Ads Block
     type: select
-    proxies:
-      - DIRECT
-
-  - name: ⛔ Reject
-    type: select
-    proxies:
-      - REJECT
-
-rule-providers:
-  Direct:
-    type: file
-    behavior: classical
-    path: "./rule_provider/direct.yaml"
-  Ads:
-    type: file
-    behavior: domain
-    path: "./rule_provider/adblock.yaml"
-  Reject:
-    type: file
-    behavior: classical
-    path: "./rule_provider/reject.yaml"
-  Ewallet:
-    type: file
-    behavior: classical
-    path: "./rule_provider/ewallet.yaml"
-  Bank:
-    type: file
-    behavior: classical
-    path: "./rule_provider/bank.yaml"
-  AI:
-    type: file
-    behavior: classical
-    path: "./rule_provider/ai.yaml"
-  Meeting:
-    type: file
-    behavior: classical
-    path: "./rule_provider/meeting.yaml"
-  Marketplace:
-    type: file
-    behavior: classical
-    path: "./rule_provider/marketplace.yaml"
-  Sosmed:
-    type: file
-    behavior: classical
-    path: "./rule_provider/sosmed.yaml"
-  Tiktok:
-    type: file
-    behavior: classical
-    path: "./rule_provider/tiktok.yaml"
-  Video:
-    type: file
-    behavior: classical
-    path: "./rule_provider/video.yaml"
-  Update:
-    type: file
-    behavior: classical
-    path: "./rule_provider/update.yaml"
-  Streaming:
-    type: file
-    behavior: classical
-    path: "./rule_provider/streaming.yaml"
-  Games:
-    type: file
-    behavior: classical
-    path: "./rule_provider/games.yaml"
+    proxies: [REJECT, DIRECT]
 
 rules:
-  - RULE-SET,Direct,🚀 Direct
-  - RULE-SET,Ewallet,💸 E-Wallet
-  - RULE-SET,Bank,🏦 Bank Lokal
-  - RULE-SET,Ads,🛡️ Ads Block
-  - RULE-SET,Reject,🛡️ Ads Block
-  - RULE-SET,AI,🤖 AI
-  - RULE-SET,Meeting,🎥 Meeting Kerja
-  - RULE-SET,Marketplace,🛒 Marketplace
-  - RULE-SET,Sosmed,💬 Sosmed
-  - RULE-SET,Tiktok,🎵 TikTok
-  - RULE-SET,Video,📺 Video Premium
-  - RULE-SET,Update,📥 Update Download
-  - RULE-SET,Streaming,🎬 Streaming
-  - RULE-SET,Games,🎮 Games
+  # --- Lokal / LAN ---
+  - DOMAIN-SUFFIX,lan,DIRECT
+  - DOMAIN-SUFFIX,local,DIRECT
+  - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+  - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+  - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
+  - IP-CIDR,169.254.0.0/16,DIRECT,no-resolve
+  - IP-CIDR,224.0.0.0/4,DIRECT,no-resolve
+
+  # --- Iklan ---
+  - DOMAIN-SUFFIX,doubleclick.net,🛡️ Ads Block
+  - DOMAIN-SUFFIX,googlesyndication.com,🛡️ Ads Block
+  - DOMAIN-SUFFIX,googleadservices.com,🛡️ Ads Block
+  - DOMAIN-SUFFIX,adservice.google.com,🛡️ Ads Block
+  - DOMAIN-SUFFIX,app-measurement.com,🛡️ Ads Block
+  - DOMAIN-SUFFIX,applovin.com,🛡️ Ads Block
+  - DOMAIN-SUFFIX,unityads.unity3d.com,🛡️ Ads Block
+  - DOMAIN-SUFFIX,vungle.com,🛡️ Ads Block
+  - DOMAIN-SUFFIX,inmobi.com,🛡️ Ads Block
+  - DOMAIN-SUFFIX,adcolony.com,🛡️ Ads Block
+  - DOMAIN-SUFFIX,mopub.com,🛡️ Ads Block
+  - DOMAIN-SUFFIX,heytapmobile.com,🛡️ Ads Block
+
+  # --- Bank & E-Wallet ---
+  - DOMAIN-SUFFIX,bca.co.id,🏦 Bank
+  - DOMAIN-SUFFIX,klikbca.com,🏦 Bank
+  - DOMAIN-SUFFIX,bri.co.id,🏦 Bank
+  - DOMAIN-KEYWORD,brimo,🏦 Bank
+  - DOMAIN-SUFFIX,bankmandiri.co.id,🏦 Bank
+  - DOMAIN-SUFFIX,bni.co.id,🏦 Bank
+  - DOMAIN-SUFFIX,bankbsi.co.id,🏦 Bank
+  - DOMAIN-SUFFIX,btn.co.id,🏦 Bank
+  - DOMAIN-SUFFIX,cimbniaga.co.id,🏦 Bank
+  - DOMAIN-SUFFIX,jago.com,🏦 Bank
+  - DOMAIN-SUFFIX,seabank.co.id,🏦 Bank
+  - DOMAIN-SUFFIX,jenius.com,🏦 Bank
+  - DOMAIN-SUFFIX,dana.id,🏦 Bank
+  - DOMAIN-SUFFIX,gopay.co.id,🏦 Bank
+  - DOMAIN-SUFFIX,gojekapi.com,🏦 Bank
+  - DOMAIN-SUFFIX,ovo.id,🏦 Bank
+  - DOMAIN-SUFFIX,linkaja.id,🏦 Bank
+  - DOMAIN-SUFFIX,flip.id,🏦 Bank
+
+  # --- Games ---
+  - DOMAIN-KEYWORD,garena,🎮 Games
+  - DOMAIN-KEYWORD,freefire,🎮 Games
+  - DOMAIN-SUFFIX,mobilelegends.com,🎮 Games
+  - DOMAIN-SUFFIX,moonton.com,🎮 Games
+  - DOMAIN-SUFFIX,pubgmobile.com,🎮 Games
+  - DOMAIN-SUFFIX,igamecj.com,🎮 Games
+  - DOMAIN-SUFFIX,callofduty.com,🎮 Games
+  - DOMAIN-SUFFIX,activision.com,🎮 Games
+  - DOMAIN-SUFFIX,roblox.com,🎮 Games
+  - DOMAIN-SUFFIX,rbxcdn.com,🎮 Games
+  - DOMAIN-SUFFIX,hoyoverse.com,🎮 Games
+  - DOMAIN-SUFFIX,mihoyo.com,🎮 Games
+  - DOMAIN-SUFFIX,riotgames.com,🎮 Games
+  - DOMAIN-SUFFIX,steampowered.com,🎮 Games
+  - DOMAIN-SUFFIX,steamcontent.com,🎮 Games
+
+  # --- Sosmed ---
+  - DOMAIN-SUFFIX,whatsapp.com,💬 Sosmed
+  - DOMAIN-SUFFIX,whatsapp.net,💬 Sosmed
+  - DOMAIN-SUFFIX,instagram.com,💬 Sosmed
+  - DOMAIN-SUFFIX,cdninstagram.com,💬 Sosmed
+  - DOMAIN-SUFFIX,facebook.com,💬 Sosmed
+  - DOMAIN-SUFFIX,fbcdn.net,💬 Sosmed
+  - DOMAIN-SUFFIX,messenger.com,💬 Sosmed
+  - DOMAIN-SUFFIX,threads.net,💬 Sosmed
+  - DOMAIN-SUFFIX,tiktok.com,💬 Sosmed
+  - DOMAIN-SUFFIX,tiktokv.com,💬 Sosmed
+  - DOMAIN-SUFFIX,tiktokcdn.com,💬 Sosmed
+  - DOMAIN-SUFFIX,byteoversea.com,💬 Sosmed
+  - DOMAIN-SUFFIX,x.com,💬 Sosmed
+  - DOMAIN-SUFFIX,twitter.com,💬 Sosmed
+  - DOMAIN-SUFFIX,twimg.com,💬 Sosmed
+  - DOMAIN-SUFFIX,telegram.org,💬 Sosmed
+  - DOMAIN-SUFFIX,t.me,💬 Sosmed
+  - IP-CIDR,91.108.0.0/16,💬 Sosmed,no-resolve
+  - IP-CIDR,149.154.160.0/20,💬 Sosmed,no-resolve
+
+  # --- Streaming ---
+  - DOMAIN-SUFFIX,youtube.com,🎬 Streaming
+  - DOMAIN-SUFFIX,googlevideo.com,🎬 Streaming
+  - DOMAIN-SUFFIX,ytimg.com,🎬 Streaming
+  - DOMAIN-SUFFIX,youtu.be,🎬 Streaming
+  - DOMAIN-SUFFIX,netflix.com,🎬 Streaming
+  - DOMAIN-SUFFIX,nflxvideo.net,🎬 Streaming
+  - DOMAIN-SUFFIX,spotify.com,🎬 Streaming
+  - DOMAIN-SUFFIX,scdn.co,🎬 Streaming
+  - DOMAIN-SUFFIX,vidio.com,🎬 Streaming
+  - DOMAIN-SUFFIX,hotstar.com,🎬 Streaming
+  - DOMAIN-SUFFIX,disneyplus.com,🎬 Streaming
+
+  # --- Sisanya ---
   - MATCH,🌍 Global

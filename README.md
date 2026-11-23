@@ -29,7 +29,7 @@ else has to be picked again.
 | 🏦 Bank | `bank.yaml`: local banks + e-wallets (DANA, GoPay, OVO, ShopeePay, ...) | 🌍 Global, ⚡ Best Ping, 🚀 Direct, ⛔ Reject, any account | 🌍 Global |
 | 💬 Sosmed | `sosmed.yaml`: WhatsApp, Instagram, Facebook, X, Telegram, TikTok, ... | 🌍 Global, ⚡ Best Ping, 🚀 Direct, ⛔ Reject, any account | 🌍 Global |
 | 🎬 Streaming | `streaming.yaml`: YouTube, Google, Netflix, Spotify, Vidio, HBO, ... | 🌍 Global, ⚡ Best Ping, 🚀 Direct, ⛔ Reject, any account | 🌍 Global |
-| 🎮 Games | `games.yaml`: Free Fire, Mobile Legends, PUBG, CoDM, ... |
+| 🎮 Games | `games.yaml`: Free Fire, Mobile Legends, PUBG, CoDM, ... | 🌍 Global, ⚡ Best Ping, 🚀 Direct, ⛔ Reject, any account | 🌍 Global |
 | 📦 Lainnya | `lainnya.yaml`: AI (ChatGPT, Gemini, ...), meeting (Zoom, Meet, ...), marketplace (Shopee, Tokopedia, ...), Play Store updates | 🌍 Global, ⚡ Best Ping, 🚀 Direct, ⛔ Reject, any account | 🌍 Global |
 | 🛡️ Ads Block | `adblock.yaml` (oisd big) + `reject.yaml` (trackers) | ⛔ Reject, 🚀 Direct, 🌍 Global, ⚡ Best Ping, any account | ⛔ Reject |
 

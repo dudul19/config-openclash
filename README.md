@@ -25,15 +25,15 @@ else has to be picked again.
 | Group | Matches | Choices | Default |
 |---|---|---|---|
 | ⚡ Best Ping | All accounts in `proxy.yaml` | Automatic (lowest ping, checked every 5 minutes) | – |
-| 🌍 Global | Everything not in a rule file | ⚡ Best Ping, DIRECT, REJECT, any account | ⚡ Best Ping |
-| 🏦 Bank | `bank.yaml`: local banks + e-wallets (DANA, GoPay, OVO, ShopeePay, ...) | 🌍 Global, ⚡ Best Ping, DIRECT, REJECT, any account | 🌍 Global |
-| 💬 Sosmed | `sosmed.yaml`: WhatsApp, Instagram, Facebook, X, Telegram, TikTok, ... | 🌍 Global, ⚡ Best Ping, DIRECT, REJECT, any account | 🌍 Global |
-| 🎬 Streaming | `streaming.yaml`: YouTube, Google, Netflix, Spotify, Vidio, HBO, ... | 🌍 Global, ⚡ Best Ping, DIRECT, REJECT, any account | 🌍 Global |
+| 🌍 Global | Everything not in a rule file | ⚡ Best Ping, 🚀 Direct, ⛔ Reject, any account | ⚡ Best Ping |
+| 🏦 Bank | `bank.yaml`: local banks + e-wallets (DANA, GoPay, OVO, ShopeePay, ...) | 🌍 Global, ⚡ Best Ping, 🚀 Direct, ⛔ Reject, any account | 🌍 Global |
+| 💬 Sosmed | `sosmed.yaml`: WhatsApp, Instagram, Facebook, X, Telegram, TikTok, ... | 🌍 Global, ⚡ Best Ping, 🚀 Direct, ⛔ Reject, any account | 🌍 Global |
+| 🎬 Streaming | `streaming.yaml`: YouTube, Google, Netflix, Spotify, Vidio, HBO, ... | 🌍 Global, ⚡ Best Ping, 🚀 Direct, ⛔ Reject, any account | 🌍 Global |
 | 🎮 Games | `games.yaml`: Free Fire, Mobile Legends, PUBG, CoDM, ... |
-| 📦 Lainnya | `lainnya.yaml`: AI (ChatGPT, Gemini, ...), meeting (Zoom, Meet, ...), marketplace (Shopee, Tokopedia, ...), Play Store updates | 🌍 Global, ⚡ Best Ping, DIRECT, REJECT, any account | 🌍 Global | 🌍 Global, ⚡ Best Ping, DIRECT | 🌍 Global |
-| 🛡️ Ads Block | `adblock.yaml` (oisd big) + `reject.yaml` (trackers) | REJECT, DIRECT, 🌍 Global, ⚡ Best Ping, any account | REJECT |
+| 📦 Lainnya | `lainnya.yaml`: AI (ChatGPT, Gemini, ...), meeting (Zoom, Meet, ...), marketplace (Shopee, Tokopedia, ...), Play Store updates | 🌍 Global, ⚡ Best Ping, 🚀 Direct, ⛔ Reject, any account | 🌍 Global |
+| 🛡️ Ads Block | `adblock.yaml` (oisd big) + `reject.yaml` (trackers) | ⛔ Reject, 🚀 Direct, 🌍 Global, ⚡ Best Ping, any account | ⛔ Reject |
 
-`direct.yaml` (LAN and local IPs) always goes DIRECT.
+`direct.yaml` (LAN and local IPs) always goes 🚀 Direct.
 
 Every group can pick its own account. By default they point at 🌍 Global, so
 when you change servers they follow it on their own.

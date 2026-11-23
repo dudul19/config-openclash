@@ -101,6 +101,7 @@ proxy-groups:
     proxies:
       - ⚡ Best Ping
       - DIRECT
+      - REJECT
     use:
       - PROXIES
 
@@ -160,6 +161,9 @@ proxy-groups:
       - REJECT
       - DIRECT
       - 🌍 Global
+      - ⚡ Best Ping
+    use:
+      - PROXIES
 
 # ---------------------------------------------------------
 #  Daftar domain ada di folder rule_provider/ (8 file).

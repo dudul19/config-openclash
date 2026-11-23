@@ -81,8 +81,8 @@ proxy-providers:
       expected-status: 204
 
 # ---------------------------------------------------------
-#  Grup. Hanya Global yang berisi daftar akun; grup lain
-#  ikut Global, jadi tidak perlu dipilih ulang saat ganti server.
+#  Grup. Tiap grup bisa pilih akun sendiri; default ikut
+#  Global, jadi tidak perlu dipilih ulang saat ganti server.
 # ---------------------------------------------------------
 proxy-groups:
   - name: ⚡ Best Ping
@@ -106,27 +106,60 @@ proxy-groups:
 
   - name: 🏦 Bank
     type: select
-    proxies: [🌍 Global, ⚡ Best Ping, DIRECT]
+    proxies:
+      - 🌍 Global
+      - ⚡ Best Ping
+      - DIRECT
+      - REJECT
+    use:
+      - PROXIES
 
   - name: 💬 Sosmed
     type: select
-    proxies: [🌍 Global, ⚡ Best Ping, DIRECT]
+    proxies:
+      - 🌍 Global
+      - ⚡ Best Ping
+      - DIRECT
+      - REJECT
+    use:
+      - PROXIES
 
   - name: 🎬 Streaming
     type: select
-    proxies: [🌍 Global, ⚡ Best Ping, DIRECT]
+    proxies:
+      - 🌍 Global
+      - ⚡ Best Ping
+      - DIRECT
+      - REJECT
+    use:
+      - PROXIES
 
   - name: 🎮 Games
     type: select
-    proxies: [🌍 Global, ⚡ Best Ping, DIRECT]
+    proxies:
+      - 🌍 Global
+      - ⚡ Best Ping
+      - DIRECT
+      - REJECT
+    use:
+      - PROXIES
 
   - name: 📦 Lainnya
     type: select
-    proxies: [🌍 Global, ⚡ Best Ping, DIRECT]
+    proxies:
+      - 🌍 Global
+      - ⚡ Best Ping
+      - DIRECT
+      - REJECT
+    use:
+      - PROXIES
 
   - name: 🛡️ Ads Block
     type: select
-    proxies: [REJECT, DIRECT]
+    proxies:
+      - REJECT
+      - DIRECT
+      - 🌍 Global
 
 # ---------------------------------------------------------
 #  Daftar domain ada di folder rule_provider/ (8 file).
